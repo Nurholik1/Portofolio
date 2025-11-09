@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ryu — Nurcholik Wijaya Saputra | Portofolio</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon (logo hitam “R”) -->
+  <link rel="icon" type="image/png" href="Vidio/logo.png" />
+
+  <!-- AOS (Animate On Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      scroll-behavior: smooth;
+    }
+    .hero { min-height: 90vh; position: relative; overflow: hidden; }
+    .hero img { object-fit: cover; width: 100%; height: 100%; }
+    .overlay { background: rgba(0, 0, 0, 0.5); position: absolute; inset: 0; }
+    .glass { background: rgba(255,255,255,0.06); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.06); }
+  </style>
+</head>
+
+<body class="bg-[#071029] text-white leading-relaxed">
+
+  <!-- HEADER -->
+  <header class="fixed w-full z-40 bg-[#061226]/80 backdrop-blur-md">
+    <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="Vidio/logo.png" alt="Logo Ryu" class="w-10 h-10 rounded-full">
+        <div>
+          <div class="text-sm font-semibold">Ryu</div>
+          <div class="text-xs text-gray-300">Nurcholik Wijaya Saputra</div>
+        </div>
+      </div>
+      <div class="hidden md:flex items-center gap-6 text-sm">
+        <a href="#about" class="hover:underline">Tentang</a>
+        <a href="#skills" class="hover:underline">Keahlian</a>
+        <a href="#projects" class="hover:underline">Proyek</a>
+        <a href="#contact" class="px-3 py-1 border rounded-full glass">Kontak</a>
+      </div>
+      <button id="navToggle" class="md:hidden p-2">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </nav>
+    <div id="mobileNav" class="md:hidden hidden bg-[#061226]/80 backdrop-blur-sm">
+      <div class="px-6 py-4 flex flex-col gap-3">
+        <a href="#about">Tentang</a>
+        <a href="#skills">Keahlian</a>
+        <a href="#projects">Proyek</a>
+        <a href="#contact" class="px-3 py-1 border rounded-full glass inline-block">Kontak</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero flex items-center justify-center" aria-label="Hero">
+    <img src="Vidio/Benner.jpg" alt="Banner Anime" />
+    <div class="overlay"></div>
+
+    <div class="absolute z-10 text-center px-6" data-aos="fade-up">
+      <h1 class="text-5xl md:text-6xl font-bold">Halo, Saya <span class="text-indigo-400">Ryu</span></h1>
+      <p class="mt-4 text-gray-300 max-w-xl mx-auto">Web Developer & Musisi yang suka desain interaktif dan animasi 😎🎸</p>
+      <div class="mt-6 flex justify-center gap-3">
+        <a href="#projects" class="px-5 py-3 bg-indigo-600 rounded-lg shadow-md hover:scale-105 transform transition">Lihat Proyek</a>
+        <a href="#contact" class="px-5 py-3 border rounded-lg glass">Hubungi Saya</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="py-20">
+    <div class="max-w-4xl mx-auto px-6" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-4">Tentang Saya</h2>
+      <p class="text-gray-300">
+        Halo! Saya <b>Nurcholik</b> (alias <b>Ryu</b>). Saya berpengalaman dalam membuat website responsif menggunakan Laravel dan Tailwind CSS. 
+        Saya juga gemar membuat desain antarmuka interaktif, dan di waktu luang saya bermain gitar serta membuat konten musik indie pop. 🎶
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="py-16 bg-[#031028]/40">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-6">
+      <div data-aos="fade-right" class="p-6 glass rounded-xl">
+        <h3 class="font-semibold mb-2">Frontend</h3>
+        <p class="text-sm text-gray-200">HTML, Tailwind CSS, JavaScript</p>
+      </div>
+      <div data-aos="fade-up" class="p-6 glass rounded-xl">
+        <h3 class="font-semibold mb-2">Backend</h3>
+        <p class="text-sm text-gray-200">PHP, Laravel, MySQL, Java</p>
+      </div>
+      <div data-aos="fade-left" class="p-6 glass rounded-xl">
+        <h3 class="font-semibold mb-2">Lainnya</h3>
+        <p class="text-sm text-gray-200">Git, Responsive Design, UI Animations</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-8">Proyek</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <article data-aos="flip-left" class="p-4 glass rounded-xl">
+          <img src="Vidio/Web_Artikel.png" alt="Sistem Absensi Sekolah" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h4 class="font-semibold">Web Artikel Berita</h4>
+          <p class="text-sm text-gray-200 mb-3">Laravel + Tailwind — fitur login role, cetak data siswa.</p>
+        </article>
+        <article data-aos="flip-left" class="p-4 glass rounded-xl">
+          <img src="Vidio/Web_Topup.png" alt="Aplikasi Toko Sepatu" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h4 class="font-semibold">Web Topup</h4>
+          <p class="text-sm text-gray-200 mb-3">Laravel — sistem topup dengan verifikasi transaksi.</p>
+        </article>
+        <article data-aos="flip-left" class="p-4 glass rounded-xl">
+          <img src="Vidio/Web_portofolio.png" alt="Portfolio Musik" class="w-full h-40 object-cover rounded-lg mb-4">
+          <h4 class="font-semibold">Portfolio Diri Sendiri</h4>
+          <p class="text-sm text-gray-200 mb-3">Tailwind + AOS — animasi halus dan tampilan clean.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 bg-[#021324]/50">
+    <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+      <div data-aos="fade-right">
+        <h2 class="text-2xl font-bold mb-3">Kontak</h2>
+        <p class="text-gray-300 mb-4">Tertarik bekerja sama? Kirim pesan singkat saja 💌</p>
+        <ul class="text-sm text-gray-200 space-y-2">
+          <li><strong>Email:</strong> <a href="mailto:Choliknur864@gmail.com" class="underline">Choliknur864@gmail.com</a></li>
+          <li><strong>Instagram:</strong> @Raikuroo</li>
+          <li><strong>Lokasi:</strong> Bandung Barat</li>
+        </ul>
+      </div>
+        <form
+        action="https://formspree.io/f/movyanld"
+        method="POST"
+        class="max-w-md mx-auto p-6 bg-[#071029]/60 backdrop-blur-md rounded-xl shadow-lg space-y-4 border border-indigo-700"
+        data-aos="fade-left"
+      >
+        <input type="hidden" name="_redirect" value="https.com/index.html#contact">
+
+        <h2 class="text-xl font-semibold text-white text-center mb-4">Kirim Pesan</h2>
+
+        <div>
+          <label class="block text-sm text-indigo-300 mb-1">Email kamu</label>
+          <input 
+            type="email" 
+            name="email" 
+            required
+            placeholder="contoh@email.com"
+            class="w-full p-3 rounded bg-[#0b1533]/70 border border-indigo-500 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm text-indigo-300 mb-1">Pesan kamu</label>
+          <textarea
+            name="message"
+            rows="4"
+            required
+            placeholder="Tulis pesan kamu di sini..."
+            class="w-full p-3 rounded bg-[#0b1533]/70 border border-indigo-500 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-white font-semibold tracking-wide transform hover:scale-105 transition"
+        >
+          Kirim
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="py-8 text-center text-sm text-gray-400">© <span id="year"></span> Ryu — Nurcholik Wijaya Saputra</footer>
+
+  <!-- Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    navToggle.addEventListener('click', () => mobileNav.classList.toggle('hidden'));
+  </script>
+</body>
+</html>
